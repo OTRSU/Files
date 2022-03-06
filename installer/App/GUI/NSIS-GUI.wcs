@@ -1,0 +1,12 @@
+CALL @windows1
+_SUB windows1,W450H220,NSIS-GUI,,imag\nsis3-install.ico
+
+IMAG ImageInstall,L22T25W25H25,%CurDir%\imag\nsis-menu.ico
+
+LABE Label1,L57T26W280H30,选择\n安装时不要改变安装目录!!!
+
+ITEM Button1,L30T80W100H40,UNINSTALL,TEAM exec %CurDir%\uninstall.bat
+ITEM Button2,L170T80W100H40,RUN,TEAM exec %CurDir%\data\NSIS\Bin\zip2exe.exe
+ITEM Button3,L310T80W100H40,INSTALL,TEAM exec %CurDir%\NSIS.bat
+
+_END
