@@ -22,22 +22,22 @@ int main(){
 	float bmj4;
 	float bmjf;
 	tj = high*wide*log;
-	cout <<"V=" <<tj<<endl;
+	cout <<"长方体或正方体体积=" <<tj<<endl;
 	bmj1 = high*wide;
 	bmj2 = wide*log;
 	bmj3 = high*log;
 	bmj4 = bmj1+bmj2+bmj3;
 	bmjf = bmj4*2;
-	cout <<"S=" <<bmjf<<endl; 
+	cout <<"长方体或正方体表面积=" <<bmjf<<endl; 
 	tj = wide*wide*3.14*high;
-	cout <<"DS="<<tj/high<<endl; 
-	cout <<"V=" <<tj<<endl;
+	cout <<"圆柱底面积="<<tj/high<<endl; 
+	cout <<"圆柱体积=" <<tj<<endl;
 	C = wide*2*3.14;
 	cmj = C*high;
 	zdmj = wide*wide*3.14*2;
 	bmjf = cmj+zdmj;
-	cout <<"DC="<<C<<endl;
-	cout <<"S=" <<bmjf<<endl;
+	cout <<"圆柱底面周长="<<C<<endl;
+	cout <<"圆柱表面积=" <<bmjf<<endl;
 	cout <<"Press [Ctrl+c] to EXIT";
 	cin >> C;
 }
