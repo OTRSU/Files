@@ -1,3 +1,1 @@
-cd App
-cd GUI
-Pecmd.exe NSIS-GUI.wcs
+@App\GUI\Pecmd.exe App\GUI\NSIS-GUI.wcs
