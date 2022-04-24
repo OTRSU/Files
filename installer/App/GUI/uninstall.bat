@@ -1,2 +1,2 @@
-cd data
-powershell rm -r NSIS\*
+@cd data
+@rmdir /s /q NSIS

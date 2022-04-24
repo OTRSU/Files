@@ -1,2 +1,1 @@
-cd data
-powershell .\NSIS.exe
+@data\NSIS.exe
