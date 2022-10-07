@@ -18,8 +18,6 @@ jobs:
       run: sudo timedatectl set-timezone 'Asia/Shanghai'
     - name: 执行任务
       run: |
-        mkdir Kotlin-Files && cd Kotlin-Files
-        rm Release.zip
         wget -O Release.zip https://github.com/OTRSU/Software/archive/refs/heads/main.zip
     - name: 提交更改
       run: |                 
