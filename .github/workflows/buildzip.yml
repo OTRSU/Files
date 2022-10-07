@@ -29,6 +29,6 @@ jobs:
         git add .
         git commit -m "$(date '+%Y-%m-%d %H:%M:%S')拉取更新"
     - name: 推送更改
-      uses:  ad-m/github-push-action@main
+      uses:  ad-m/github-push-action@master
       with:
         branch: main
