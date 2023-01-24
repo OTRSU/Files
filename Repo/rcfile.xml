@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection info="RCFILE">
+    <SoftID title="test">
+        <WorkDir>test</WorkDir>
+        <Scrpit>test</Scrpit>
+        <type>bin</type>
+        <ID>test-0.1</ID>
+    </SoftID>
+    <SoftID title="program-manager">
+        <WorkDir>program-manager</WorkDir>
+        <Scrpit>program-manager</Scrpit>
+        <type>bin</type>
+        <ID>program-manager-0.1</ID>
+    </SoftID>
+</collection>
