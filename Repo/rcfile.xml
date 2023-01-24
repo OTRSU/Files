@@ -6,7 +6,7 @@
     <test title="v0.1">
         <WorkDir>test</WorkDir>
         <Scrpit>test</Scrpit>
-        <type>bin</type>
+        <type>shell</type>
         <ID>test-0.1</ID>
     </test>
     <program-manager title="v0.1">
