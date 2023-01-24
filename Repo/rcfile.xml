@@ -2,6 +2,7 @@
 <collection info="RCFILE">
     <SoftID title="test"></SoftID>
     <SoftID title="program-manager"></SoftID>
+    <SoftID title="Amulet"></SoftID>
 
     <test title="v0.1">
         <WorkDir>test</WorkDir>
@@ -15,4 +16,10 @@
         <type>bin</type>
         <ID>program-manager-0.1</ID>
     </program-manager>
+    <Amulet title="0.10.8">
+        <WorkDir>Amulet</Amulet>
+        <Scrpit>amulet_app</Amulet>
+        <type>bin</type>
+        <ID>Amulet-0.10.8</ID>
+    </Amulet>
 </collection>
