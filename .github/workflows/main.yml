@@ -1,0 +1,34 @@
+name: Proton Build
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  my_job:
+    name: Setup ENV
+    runs-on: ubuntu-latest
+    steps:
+    - name: 迁出代码
+      uses: actions/checkout@v2
+    - name: 设置时区
+      run: sudo timedatectl set-timezone 'Asia/Shanghai'
+    - name: Setup makepkg
+      run: apt-get install makepkg git pacman -y
+    - name: Get Source
+      run: git clone https://aur.archlinux.org/proton.git
+    - name: ENV
+      run: cd proton ; makepkg --syncdeps
+    - name Build
+      run: makepkg ; makepkg --clean
+    -  name: 提交更改
+      run: |                 
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git pull origin main
+        git add .
+        git commit -m "$(date '+%Y-%m-%d %H:%M:%S')拉取更新"
+    - name: 推送更改
+      uses:  ad-m/github-push-action@master
+      with:
+        branch: main
