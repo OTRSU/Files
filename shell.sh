@@ -6,10 +6,7 @@ dpkg -i pacman-package-manager_6.0.1-4_amd64.deb
 dpkg -i makepkg_6.0.1-4_amd64.deb
 dpkg -i libalpm-dev_13.0.2-3_amd64.deb
 dpkg -i libalpm13_6.0.1-4_amd64.deb
-wget https://raw.githubusercontent.com/OTRSU/Files/main/makepkg.conf 
-mv makepkg.conf /etc/makepkg.conf
-wget https://raw.githubusercontent.com/OTRSU/Files/main/pacman.conf 
+mv makepkg.conf /etc/makepkg.conf 
 mv pacman.conf /etc/pacman.conf
-wget https://raw.githubusercontent.com/OTRSU/Files/main/mirrorlist
 mv mirrorlist /etc/mirrorlist
 pacman -Sy
