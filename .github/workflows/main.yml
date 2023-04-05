@@ -14,7 +14,7 @@ jobs:
     - name: 设置时区
       run: sudo timedatectl set-timezone 'Asia/Shanghai'
     - name: Setup makepkg
-      run: apt-get install makepkg git pacman -y
+      run: sudo apt-get install makepkg git pacman -y
     - name: Get Source
       run: git clone https://aur.archlinux.org/proton.git
     - name: ENV
