@@ -19,9 +19,9 @@ jobs:
       run: git clone https://aur.archlinux.org/proton.git
     - name: ENV
       run: cd proton ; makepkg --syncdeps
-    - name Build
+    - name: Build
       run: makepkg ; makepkg --clean
-    -  name: 提交更改
+    - name: 提交更改
       run: |                 
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
