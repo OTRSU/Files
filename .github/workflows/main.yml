@@ -7,14 +7,14 @@ on:
 jobs:
   my_job:
     name: Setup ENV
-    runs-on: ubuntu-22.10
+    runs-on: ubuntu-lasted
     steps:
     - name: 迁出代码
       uses: actions/checkout@v2
     - name: 设置时区
       run: sudo timedatectl set-timezone 'Asia/Shanghai'
     - name: Setup makepkg
-      run: sudo apt-get install git pacman-package-manager -y
+      run: sudo apt-get update ; sudo apt-get install git pacman-package-manager -y
     - name: Get Source
       run: git clone https://aur.archlinux.org/proton.git
     - name: ENV
