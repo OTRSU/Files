@@ -1,0 +1,32 @@
+name: Get clash node
+
+on:
+  schedule:
+    # *is a special character in YAML so you have to quote this string
+    - cron:  '0 12 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get update from freenode.org daily
+        run: sh freenode-org.sh
+
+      - name: Upload Node file (Clash)
+        uses: actions/upload-artifact@v3
+        with:
+          name: node
+          path: node.yaml
+
+      - name: Push
+        run: |
+          date > generated.txt
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "generated $date"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
