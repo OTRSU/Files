@@ -19,6 +19,7 @@ jobs:
     - name: 执行任务
       run: |
         cd Kotlin-Files
+        rm -f Release.zip
         wget -O Release.zip https://github.com/OTRSU/Software/archive/refs/heads/main.zip
     - name: 提交更改
       run: |                 
